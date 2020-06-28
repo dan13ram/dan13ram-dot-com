@@ -8,7 +8,7 @@ featuredImage: /img/work/vahanam.png
 points:
     - Won the second prize in the Stop Covid-19 virtual global hackathon conducted by Gitcoin and Consensys Health.
     - Developed the frontend dapp which interacts with the smart-contracts using web3JS.
-    - Developed the telegram bot to quickly onboard users to interact with an Aragon DAO.
+    - Worked on the telegram bot to quickly onboard users to interact with an Aragon DAO.
 links:
     - label: live demo
       icon: view
