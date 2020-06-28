@@ -8,10 +8,12 @@ import '../scss/post.scss';
 export const WorkProjectTemplate = ({
     title,
     description,
+    featuredImage,
     helmet,
+    points,
     tags,
-    liveUrl,
-    codeUrl,
+    tools,
+    links,
 }) => {
     return (
         <div className="workProject post">
@@ -23,10 +25,43 @@ export const WorkProjectTemplate = ({
                     <p>{description}</p>
                 </header>
 
-                <div className="content">
-                    <p> {codeUrl} </p>
-                    <p> {liveUrl} </p>
-                </div>
+                <section className="content">
+                    {tools && tools.length ? (
+                        <div>
+                            <h4>Details</h4>
+                            <ul className="toollist">
+                                {points.map((point, index) => (
+                                    <li key={index}>{point}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : null}
+
+                    {links && links.length ? (
+                        <div>
+                            <h4>Links</h4>
+                            <ul className="toollist">
+                                {links.map((link, index) => (
+                                    <li key={index}>
+                                        {`${link.label} - `}
+                                        <a href={link.url}>{link.url}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : null}
+
+                    {tools && tools.length ? (
+                        <div>
+                            <h4>Tools Used</h4>
+                            <ul className="toollist">
+                                {tools.map((tool, index) => (
+                                    <li key={index}>{tool}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : null}
+                </section>
             </article>
             <footer>
                 {tags && tags.length ? (
@@ -50,10 +85,11 @@ export const WorkProjectTemplate = ({
 
 WorkProjectTemplate.propTypes = {
     tags: PropTypes.array,
+    tools: PropTypes.array,
+    points: PropTypes.array,
+    links: PropTypes.array,
     description: PropTypes.string,
     title: PropTypes.string,
-    liveUrl: PropTypes.string,
-    codeUrl: PropTypes.string,
     helmet: PropTypes.object,
 };
 
@@ -63,13 +99,14 @@ const WorkProject = ({ data }) => {
     }, []);
     const {
         markdownRemark: {
-            frontmatter: { title, description, tags, liveUrl, codeUrl },
+            frontmatter: { title, description, tags, tools, links, points, featuredImage },
         },
     } = data;
     return (
         <WorkProjectTemplate
             title={title}
             description={description}
+            featuredImage={featuredImage}
             helmet={
                 <SEO
                     titleTemplate="%s | Work"
@@ -83,8 +120,9 @@ const WorkProject = ({ data }) => {
                 />
             }
             tags={tags}
-            liveUrl={liveUrl}
-            codeUrl={codeUrl}
+            tools={tools}
+            points={points}
+            links={links}
         />
     );
 };
@@ -106,8 +144,20 @@ export const pageQuery = graphql`
                 title
                 description
                 tags
-                codeUrl
-                liveUrl
+                tools
+                featuredImage {
+                    childImageSharp {
+                        fluid(maxWidth: 500, quality: 100) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                points
+                links {
+                    url
+                    label
+                    icon
+                }
             }
         }
     }

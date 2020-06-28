@@ -4,13 +4,16 @@ import { WorkProjectTemplate } from '../../templates/work-project';
 
 const WorkProjectPreview = ({ entry, widgetFor }) => {
     const tags = entry.getIn(['data', 'tags']);
+    const tools = entry.getIn(['data', 'tools']);
+    const linksEntry = entry.getIn(['data', 'links']);
+    const links = linksEntry ? linksEntry.toJS() : [];
     return (
         <WorkProjectTemplate
+            links={links}
+            tools={tools && tools.toJS()}
             tags={tags && tags.toJS()}
             title={entry.getIn(['data', 'title'])}
             description={entry.getIn(['data', 'description'])}
-            liveUrl={entry.getIn(['data', 'liveUrl'])}
-            codeUrl={entry.getIn(['data', 'codeUrl'])}
         />
     );
 };

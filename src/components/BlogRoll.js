@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
-import '../scss/roll.scss';
+import '../scss/blogRoll.scss';
 
 class BlogRoll extends React.Component {
     render() {
@@ -10,7 +10,7 @@ class BlogRoll extends React.Component {
         const { edges: posts } = data.allMarkdownRemark;
 
         return (
-            <div className="blogRoll roll">
+            <div className="blogRoll">
                 {posts &&
                     posts.map(({ node: post }) => (
                         <article
@@ -29,22 +29,19 @@ class BlogRoll extends React.Component {
                                     }}
                                 />
                             </div>
-                            <div className="itemContainer">
-                                <div className="itemContent">
-                                    <p className="center itemTitle">
-                                        {post.frontmatter.title}
-                                    </p>
-                                    <p className="center itemDate">
-                                        {post.frontmatter.date}
-                                    </p>
-                                    <p className="itemDescription">
-                                        {post.frontmatter.description ||
-                                            post.excerpt}
-                                    </p>
-                                    <Link to={post.fields.slug}>
-                                        Read {'\u276F'}
-                                    </Link>
-                                </div>
+                            <div className="itemContent">
+                                <p className="itemTitle">
+                                    {post.frontmatter.title}
+                                </p>
+                                <p className="itemDate">
+                                    {post.frontmatter.date}
+                                </p>
+                                <p className="itemDescription">
+                                    {post.excerpt}
+                                </p>
+                                <Link to={post.fields.slug}>
+                                    read more {'\u276F'}
+                                </Link>
                             </div>
                         </article>
                     ))}
@@ -86,7 +83,7 @@ export default () => (
                                 featuredPost
                                 featuredImage {
                                     childImageSharp {
-                                        fluid(maxWidth: 120, quality: 100) {
+                                        fluid(maxWidth: 1200, quality: 100) {
                                             ...GatsbyImageSharpFluid
                                         }
                                     }

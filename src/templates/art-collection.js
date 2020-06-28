@@ -26,11 +26,11 @@ export const ArtCollectionTemplate = ({
                 <div className="content">
                     {content && content.length ? (
                         <div>
-                            <h4>Content</h4>
+                            {/* <h4>Content</h4> */}
                             {content.map((item, index) => (
                                 <div key={index} className="contentItem">
-                                    <p>{item.title}</p>
-                                    <p>{item.description}</p>
+                                    {/* <p>{item.title}</p> */}
+                                    {/* <p>{item.description}</p> */}
                                     <PreviewCompatibleImage
                                         className="contentImage"
                                         imageInfo={{
@@ -38,9 +38,10 @@ export const ArtCollectionTemplate = ({
                                             alt: item.title,
                                         }}
                                     />
-                                    <p>{item.width}</p>
-                                    <p>{item.height}</p>
-                                    <p>{item.size}</p>
+                                    <br />
+                                    {/* <p>{item.width}</p> */}
+                                    {/* <p>{item.height}</p> */}
+                                    {/* <p>{item.size}</p> */}
                                 </div>
                             ))}
                         </div>

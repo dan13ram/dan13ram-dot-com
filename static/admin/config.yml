@@ -31,12 +31,18 @@ collections:
               default: "work-project",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "LiveUrl", name: "liveUrl", widget: "string" }
-          - { label: "CodeUrl", name: "codeUrl", widget: "string" }
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Featured Item", name: "featuredItem", widget: "boolean" }
           - { label: "Featured Image", name: "featuredImage", widget: image }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+                - { label: "Label", name: "label", widget: "string" }
+                - { label: "Icon", name: "icon", widget: "string" }
+                - { label: "URL", name: "url", widget: "string" }
+          - { label: "Tools", name: "tools", widget: "list" }
           - { label: "Tags", name: "tags", widget: "list" }
     - name: "art"
       label: "Art"

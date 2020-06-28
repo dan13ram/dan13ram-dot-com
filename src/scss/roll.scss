@@ -1,11 +1,10 @@
 .roll {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     .rollItem {
         transition: all 0.25s ease-in-out;
         overflow: hidden;
-        border-radius: 1rem;
         position: relative;
         color: var(--dark-color);
         align-items: center;
@@ -152,11 +151,5 @@
                 // transform: translateY(0%);
             }
         }
-    }
-}
-
-@media (max-width: 70rem) {
-    .roll {
-        grid-template-columns: 1fr 1fr;
     }
 }

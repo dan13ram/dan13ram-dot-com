@@ -21,6 +21,7 @@ export const AboutPageTemplate = ({
             {helmet || ''}
 
             <section className="about-me">
+                <div className="title">about me</div>
                 <PreviewCompatibleImage
                     className="avatar"
                     imageInfo={{

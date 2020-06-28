@@ -44,7 +44,7 @@ class ArtRoll extends React.Component {
                                                 {post.frontmatter.date}
                                             </p>
                                             <Link to={post.fields.slug}>
-                                                View {'\u276F'}
+                                                view more {'\u276F'}
                                             </Link>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@ export default () => (
                                 featuredItem
                                 featuredImage {
                                     childImageSharp {
-                                        fluid(maxWidth: 120, quality: 100) {
+                                        fluid(maxWidth: 1200, quality: 100) {
                                             ...GatsbyImageSharpFluid
                                         }
                                     }

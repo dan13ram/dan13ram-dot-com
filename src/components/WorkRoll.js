@@ -2,43 +2,105 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
-import '../scss/roll.scss';
+import '../scss/workRoll.scss';
+import { Icon } from '@iconify/react';
+import githubIcon from '@iconify/icons-ant-design/github-filled';
+import gitlabIcon from '@iconify/icons-ant-design/gitlab-filled';
+import eyeIcon from '@iconify/icons-ant-design/eye-outlined';
 
 class WorkRoll extends React.Component {
     render() {
         const { data } = this.props;
         const { edges: posts } = data.allMarkdownRemark;
+        const getIcon = icon => {
+            switch (icon) {
+                case 'view':
+                    return eyeIcon;
+                case 'github':
+                    return githubIcon;
+                case 'gitlab':
+                    return gitlabIcon;
+                default:
+                    return null;
+            }
+        };
 
         return (
             <div className="workRoll roll">
                 {posts &&
                     posts.map(({ node: post }) => (
-                        <article
-                            key={post.id}
-                            className={
-                                post.frontmatter.featuredItem
-                                    ? 'rollItem workProject featured'
-                                    : 'rollItem workProject'
-                            }
-                        >
-                            <div className="featuredImage">
-                                <PreviewCompatibleImage
-                                    imageInfo={{
-                                        image: post.frontmatter.featuredImage,
-                                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                                    }}
-                                />
-                            </div>
-                            <div className="itemContainer">
-                                <div className="itemContent">
-                                    <p className="center itemTitle">
-                                        {post.frontmatter.title}
-                                    </p>
-                                    <p className="center itemDate">
-                                        {post.frontmatter.date}
-                                    </p>
-                                    <Link to={post.fields.slug}>
-                                        View {'\u276F'}
+                        <article key={post.id} className="workItem">
+                            <div className="workItemInner">
+                                <div className="workHeaderContainer">
+                                    <div className="workHeader">
+                                        <span className="workTitle">
+                                            {post.frontmatter.title}
+                                        </span>
+                                        <span className="workDescription">
+                                            {post.frontmatter.description}
+                                        </span>
+                                    </div>
+                                    <div className="workLinks">
+                                        {post.frontmatter.links.map(link => (
+                                            <div
+                                                className="linkItem"
+                                                key={link.url + `link`}
+                                            >
+                                                <a
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <Icon
+                                                        className="linkIcon"
+                                                        icon={getIcon(
+                                                            link.icon
+                                                        )}
+                                                    />
+                                                    {link.label}
+                                                </a>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="workContent">
+                                    <ul className="workPoints">
+                                        {post.frontmatter.points.map(
+                                            (point, index) => (
+                                                <li
+                                                    className="pointItem"
+                                                    key={index}
+                                                >
+                                                    {point}
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                    <div className="workTools">
+                                        {post.frontmatter.tools.map(tool => (
+                                            <div
+                                                className="toolItem"
+                                                key={tool + `tool`}
+                                            >
+                                                {tool}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="workImage">
+                                    <PreviewCompatibleImage
+                                        imageInfo={{
+                                            image:
+                                                post.frontmatter.featuredImage,
+                                        }}
+                                    />
+                                </div>
+                                <div className="viewMore">
+                                    <Link
+                                        className="viewLink"
+                                        to={post.fields.slug}
+                                    >
+                                        view more {'\u276F'}
                                     </Link>
                                 </div>
                             </div>
@@ -82,10 +144,17 @@ export default () => (
                                 featuredItem
                                 featuredImage {
                                     childImageSharp {
-                                        fluid(maxWidth: 120, quality: 100) {
+                                        fluid(maxWidth: 1200, quality: 100) {
                                             ...GatsbyImageSharpFluid
                                         }
                                     }
+                                }
+                                points
+                                tools
+                                links {
+                                    url
+                                    label
+                                    icon
                                 }
                             }
                         }

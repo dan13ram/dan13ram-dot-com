@@ -1,0 +1,76 @@
+.blogRoll {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .rollItem {
+        display: flex;
+        flex-direction: column;
+        column-gap: 0.5rem;
+        position: relative;
+        color: var(--dark-color);
+        margin: 0.5rem;
+        box-shadow: var(--box-shadow);
+        background: var(--light-color);
+        .featuredImage {
+            width: 100%;
+            height: 17rem;
+        }
+        .itemContent {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            padding: 0.5rem;
+            z-index: 1;
+            background: var(--light-color);
+            p {
+                &.itemDate {
+                    font-size: 0.75rem;
+                }
+                &.itemTitle {
+                    margin: 0;
+                }
+                margin-top: 0;
+                font-weight: bold;
+            }
+        }
+        a {
+            // transform: translateY(100%);
+            margin: 0;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            color: var(--light-color);
+            background: var(--dark-color);
+            padding: 0.5rem;
+            width: 100%;
+            text-align: center;
+            &:hover {
+                color: var(--shadow-color);
+            }
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 40rem) and (min-height: 30rem) {
+}
+
+@media (max-width: 60rem) {
+    .blogRoll {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .rollItem {
+            display: flex;
+            flex-direction: column;
+            .featuredImage {
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 40rem), (max-height: 30rem) {
+}
