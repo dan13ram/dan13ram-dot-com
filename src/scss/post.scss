@@ -21,6 +21,9 @@
             p {
                 display: flex;
             }
+            img {
+                max-width: 100%;
+            }
             border-style: none none solid none;
             border-width: 1px;
             border-color: var(--shadow-color-3);
@@ -28,6 +31,7 @@
                 border-radius: 0.5rem;
                 padding: 0.5rem 1rem;
                 background: var(--shadow-color-3);
+                white-space: pre-wrap;
             }
         }
         background: var(--light-color);

@@ -40,7 +40,7 @@
                 padding: 0.5rem;
                 z-index: 1;
                 width: 100%;
-                background: var(--light-color);
+                background: var(--tile-color);
                 p {
                     &.itemDate {
                         font-size: 0.75rem;
@@ -66,7 +66,7 @@
             transition: opacity 0.25s ease-in-out;
             text-align: center;
             &:hover {
-                color: var(--shadow-color);
+                color: var(--tile-color);
             }
             opacity: 0;
             visibility: hidden;
@@ -110,8 +110,9 @@
     }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 40rem) {
     .roll {
+        grid-template-columns: 1fr;
         .rollItem {
             .itemContainer {
                 .itemContent {

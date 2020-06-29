@@ -57,7 +57,9 @@ class WorkRoll extends React.Component {
                                                             link.icon
                                                         )}
                                                     />
-                                                    {link.label}
+                                                    <span className="linkText">
+                                                        {link.label}
+                                                    </span>
                                                 </a>
                                             </div>
                                         ))}

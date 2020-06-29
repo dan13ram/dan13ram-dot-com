@@ -8,7 +8,7 @@
     align-items: center;
     z-index: 10;
     width: 6rem;
-    height: 100vh;
+    height: 100%;
     background: var(--dark-color);
     color: var(--light-color);
     box-shadow: var(--box-shadow);
@@ -29,7 +29,7 @@
             width: 100%;
         }
         &:hover {
-            color: var(--shadow-color);
+            color: var(--tile-color);
         }
         .logoImg {
             width: 4rem;
@@ -56,7 +56,7 @@
                 &::after,
                 &::before,
                 div {
-                    background-color: var(--shadow-color);
+                    background-color: var(--tile-color);
                 }
             }
     }
@@ -68,7 +68,7 @@
             font-size: 1rem;
             color: var(--light-color);
             &:hover {
-                color: var(--shadow-color);
+                color: var(--tile-color);
             }
         }
     }
@@ -90,7 +90,7 @@
             width: 3rem;
             height: 3rem;
             &:hover {
-                color: var(--shadow-color);
+                color: var(--tile-color);
             }
             .icon {
                 font-size: 2rem;
@@ -157,8 +157,8 @@
         }
         &.open {
             z-index: 15;
-            height: 100vh;
-            width: 100vw;
+            height: 100%;
+            width: 100%;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
@@ -186,7 +186,7 @@
                 transition: opacity 0.5s;
                 opacity: 1;
                 visibility: visible;
-                width: 100vw;
+                width: 100%;
                 align-items: stretch;
                 display: flex;
                 justify-content: center;
@@ -224,7 +224,7 @@
         right: auto;
         width: 4rem;
         transition: height 0.25s ease-in-out;
-        height: 100vh;
+        height: 100%;
         .switchContainer {
             position: fixed;
             bottom: 3rem;
@@ -265,7 +265,7 @@
             left: auto;
             flex-direction: column;
             width: 4rem;
-            height: 100vh;
+            height: 100%;
             margin: 0;
             transition: transform 0.25s ease-in-out, opacity 0.5s ease-in-out;
             justify-content: center;
@@ -274,8 +274,8 @@
         }
         &.open {
             z-index: 15;
-            height: 100vh;
-            width: 100vw;
+            height: 100%;
+            width: 100%;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
@@ -298,7 +298,7 @@
                 }
             }
             .navMenu {
-                height: 100vh;
+                height: 100%;
                 width: calc(100% - 8rem);
                 transition: opacity 0.5s;
                 opacity: 1;

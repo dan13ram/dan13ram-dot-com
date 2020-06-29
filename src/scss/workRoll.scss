@@ -19,7 +19,7 @@
         }
         padding: 1rem 0.5rem;
         color: var(--dark-color);
-        background: var(--light-color);
+        background: var(--tile-color);
         box-shadow: var(--box-shadow);
         display: grid;
         width: calc(100% - 1rem);
@@ -36,6 +36,7 @@
             .workHeader {
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 margin-left: 0.6rem;
             }
         }
@@ -59,12 +60,11 @@
             background: var(--dark-color);
             padding: 0.5rem;
             width: 100%;
-            height: 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
             &:hover {
-                color: var(--shadow-color);
+                color: var(--tile-color);
             }
         }
         .workTitle {
@@ -89,6 +89,7 @@
                 border-radius: 0.5rem;
                 .linkIcon {
                     margin-right: 0.5rem;
+                    font-size: 1.5rem;
                 }
                 a {
                     display: flex;
@@ -125,12 +126,22 @@
             display: flex;
             flex-direction: column;
             .workHeaderContainer {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
+                margin-bottom: 0.5rem;
                 .workLinks {
-                    margin-top: 0.5rem;
+                    flex-direction: row;
                 }
+                .linkItem {
+                    padding: 0;
+                .linkIcon {
+                    margin: 0;
+                }
+                }
+                .linkText {
+                    display: none;
+                }
+            }
+            .workImage {
+                margin: 0.5rem 0;
             }
         }
     }

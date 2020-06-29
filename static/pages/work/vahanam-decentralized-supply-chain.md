@@ -9,6 +9,7 @@ points:
     - Won the second prize in the Stop Covid-19 virtual global hackathon conducted by Gitcoin and Consensys Health.
     - Developed the frontend dapp which interacts with the smart-contracts using web3JS.
     - Worked on the telegram bot to quickly onboard users to interact with an Aragon DAO.
+    - Ongoing open-source project.
 links:
     - label: live demo
       icon: view

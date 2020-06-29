@@ -10,7 +10,7 @@
         color: var(--dark-color);
         margin: 0.5rem;
         box-shadow: var(--box-shadow);
-        background: var(--light-color);
+        background: var(--tile-color);
         .featuredImage {
             width: 100%;
             height: 17rem;
@@ -23,7 +23,7 @@
             flex-direction: column;
             padding: 0.5rem;
             z-index: 1;
-            background: var(--light-color);
+            background: var(--tile-color);
             p {
                 &.itemDate {
                     font-size: 0.75rem;
@@ -47,7 +47,7 @@
             width: 100%;
             text-align: center;
             &:hover {
-                color: var(--shadow-color);
+                color: var(--tile-color);
             }
             display: block;
         }

@@ -1,13 +1,14 @@
 ---
 templateKey: work-project
 title: littlehoodedcreature
-date: 2019-06-20T00:18:20.000Z
-description: Personal portfolio and blog
+date: 2020-03-20T00:18:20.000Z
+description: Artist portfolio and blog
 featuredItem: true
 featuredImage: /img/work/littlehoodedcreature.png
 points:
     - Developed the JAMstack website using GatsbyJS, NetlifyCMS and GraphQL.
-    - Worked closely with the artist to design the website.
+    - Worked closely with an upcoming animator/artist to design her professional portfolio and blog.
+    - Ongoing project.
 links:
     - label: live demo
       icon: view

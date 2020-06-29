@@ -92,10 +92,9 @@ module.exports = {
                 name: `dan13ram`,
                 short_name: `dan13ram`,
                 start_url: `/`,
-                //background_color: `#ffffff`,
-                //theme_color: `#663399`,
-                //display: `minimal-ui`,
-                //icon: `content/assets/gatsby-icon.png`
+                background_color: `#ffffff`,
+                theme_color: `#ffffff`,
+                icon: `static/img/logo.svg`
             },
         },
         {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { applyTheme } from '../../utils/Theme';
-import useSiteMetadata from '../SiteMetadata';
+import { applyTheme } from '../utils/Theme';
+import useSiteMetadata from '../utils/SiteMetadata';
 import Logo from './Logo';
 
 import { Icon } from '@iconify/react';
@@ -9,7 +9,7 @@ import instagramOutlined from '@iconify/icons-ant-design/instagram-outlined';
 import twitterOutlined from '@iconify/icons-ant-design/twitter-outlined';
 import linkedinOutlined from '@iconify/icons-ant-design/linkedin-outlined';
 import githubOutlined from '@iconify/icons-ant-design/github-outlined';
-import '../../scss/navBar.scss';
+import '../scss/navBar.scss';
 /* eslint-disable */
 
 const Navbar = ({ title }) => {

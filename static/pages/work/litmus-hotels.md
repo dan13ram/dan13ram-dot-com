@@ -7,7 +7,7 @@ featuredItem: true
 featuredImage: /img/work/litmus.png
 points:
     - Developed the ReactJS website with special animations and canvas effects.
-    - Worked closely with Autopilot, a design firm, to visualise their designs as a working website.
+    - Worked closely with Spoilt Ideas | autopilot - a design studio, to visualise their design as a working website.
 links:
     - label: live demo
       icon: view

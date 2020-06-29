@@ -1,25 +1,15 @@
 const darkTheme = {
-    '--dark-color': 'black',
-    '--light-color': 'white',
-    '--light-color-3': 'rgba(255,255,255,0.5)',
-    '--shadow-color': 'rgba(128,128,128)',
-    '--shadow-color-3': 'rgba(128,128,128,0.3)',
+    '--dark-color': 'rgba(75, 112, 145)',
+    '--light-color': 'rgba(206, 221, 235)',
+    '--light-color-3': 'rgba(206, 221, 235,0.5)',
+    '--tile-color': 'white',
 };
 
-// const darkTheme = {
-//     '--dark-color': '#0F3B5C',
-//     '--light-color': '#58B2F5',
-//     '--light-color-3': 'rgba(88, 178, 245, 0.5)',
-//     '--shadow-color': '#2C73A8',
-//     '--shadow-color-3': 'rgba(44, 115, 168, 0.3)',
-// };
-
 const lightTheme = {
-    '--dark-color': 'white',
-    '--light-color': 'black',
-    '--light-color-3': 'rgba(0,0,0,0.5)',
-    '--shadow-color': 'rgba(128,128,128)',
-    '--shadow-color-3': 'rgba(128,128,128,0.3)',
+    '--dark-color': 'rgba(206, 221, 235)',
+    '--light-color': 'rgba(75, 112, 145)',
+    '--light-color-3': 'rgba(75, 112, 145, 0.3)',
+    '--tile-color': 'rgba(55, 62, 69)',
 };
 
 export const applyTheme = (nextTheme) => {

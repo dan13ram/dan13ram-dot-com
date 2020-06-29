@@ -1,10 +1,10 @@
 import React from 'react';
-import SEO from '../SEO';
+import SEO from './SEO';
 import Footer from './Footer';
 import Navbar from './Navbar';
-import '../../scss/all.scss';
-import '../../scss/layout.scss';
-import useSiteMetadata from '../SiteMetadata';
+import '../scss/all.scss';
+import '../scss/layout.scss';
+import useSiteMetadata from '../utils/SiteMetadata';
 
 const Layout = ({ children }) => {
     const { title, social } = useSiteMetadata();
