@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import { graphql, Link } from 'gatsby';
@@ -15,13 +15,23 @@ export const BlogPostTemplate = ({
     helmet,
 }) => {
     const PostContent = contentComponent || Content;
+    const headerRef = useRef(null);
+    useEffect(() => {
+        setTimeout(() => {
+            headerRef.current &&
+                headerRef.current.scrollIntoView({
+                    behavior: 'auto',
+                    block: 'end',
+                });
+        }, 50);
+    }, []);
 
     return (
         <div className="blogPost post">
             {helmet || ''}
 
             <article className="container">
-                <header>
+                <header ref={headerRef}>
                     <h1>{title}</h1>
                     <p>{description}</p>
                 </header>
@@ -59,9 +69,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
     const { markdownRemark: post } = data;
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <BlogPostTemplate

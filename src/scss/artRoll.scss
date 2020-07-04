@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     .rollItem {
+        box-shadow: var(--box-shadow);
         transition: all 0.25s ease-in-out;
         overflow: hidden;
         position: relative;

@@ -4,7 +4,6 @@
 *::after,
 *::before {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 :root {
@@ -18,7 +17,7 @@
     --shadow-color: rgba(150, 177, 214);
     --shadow-color-3: rgba(150, 166, 181, 0.3);
     --background-color: var(--shadow-color);
-    --box-shadow-color: rgba(75, 112, 145, 0.3);
+    --box-shadow-color: rgba(55, 62, 69, 0.5);
     --box-shadow: 0rem 0rem 0.6rem 0.1rem var(--box-shadow-color);
 }
 
