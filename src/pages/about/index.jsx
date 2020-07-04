@@ -21,7 +21,6 @@ export const AboutPageTemplate = ({
             {helmet || ''}
 
             <section className="about-me">
-                <div className="title">about me</div>
                 <PreviewCompatibleImage
                     className="avatar"
                     imageInfo={{
@@ -48,7 +47,7 @@ const AboutPage = ({ data }) => {
             avatarImage={markdownRemark.frontmatter.avatarImage}
             title={markdownRemark.frontmatter.title}
             content={markdownRemark.html}
-            helmet={<SEO title={`About`} />}
+            helmet={<SEO title={`Me`} />}
         />
     );
 };

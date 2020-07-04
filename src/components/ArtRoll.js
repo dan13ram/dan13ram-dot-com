@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import PreviewCompatibleImage from './PreviewCompatibleImage';
-import '../scss/roll.scss';
+import BackgroundImage from 'gatsby-background-image';
+import '../scss/artRoll.scss';
 
 class ArtRoll extends React.Component {
     render() {
@@ -10,46 +10,36 @@ class ArtRoll extends React.Component {
         const { edges: posts } = data.allMarkdownRemark;
 
         return (
-            <div className="artRoll roll">
+            <div className="artRoll">
                 {posts &&
                     posts.map(({ node: post }) => {
                         if (featured && !post.frontmatter.featuredItem) {
                             return null;
                         }
                         return (
-                            <div
+                            <Link
+                                to={post.fields.slug}
                                 key={post.id}
-                                className={
-                                    post.frontmatter.featuredItem
-                                        ? 'rollItem artCollection featured'
-                                        : 'rollItem artCollection'
-                                }
+                                className=
+                                         'rollItem'
                             >
-                                <div className="rollInner">
-                                    <div className="featuredImage">
-                                        <PreviewCompatibleImage
-                                            imageInfo={{
-                                                image:
-                                                    post.frontmatter.featuredImage,
-                                                alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                                            }}
-                                        />
+                                <BackgroundImage
+                                    fluid={
+                                        post.frontmatter.featuredImage
+                                            .childImageSharp.fluid
+                                    }
+                                    className="itemContainer"
+                                >
+                                    <div className="itemContent">
+                                        <p className="center itemTitle">
+                                            {post.frontmatter.title}
+                                        </p>
+                                        <p className="center itemDate">
+                                            {post.frontmatter.date}
+                                        </p>
                                     </div>
-                                    <div className="itemContainer">
-                                        <div className="itemContent">
-                                            <p className="center itemTitle">
-                                                {post.frontmatter.title}
-                                            </p>
-                                            <p className="center itemDate">
-                                                {post.frontmatter.date}
-                                            </p>
-                                            <Link to={post.fields.slug}>
-                                                view more {'\u276F'}
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                </BackgroundImage>
+                            </Link>
                         );
                     })}
             </div>

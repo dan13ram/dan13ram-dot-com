@@ -31,10 +31,14 @@
         }
         .footer {
             z-index: 10;
+            border-style: solid none none none;
+            border-width: 1px;
+            border-color: var(--shadow-color-3);
             margin-top: auto;
-            width: 100%;
-            background: var(--dark-color);
-            color: var(--light-color);
+            width: calc(100% - 2rem);
+            margin-left: 1rem;
+            margin-right: 1rem;
+            color: var(--dark-color);
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -46,12 +50,11 @@
                 padding: 0.5rem;
                 font-size: 1rem;
                 text-decoration: none;
-                color: var(--light-color);
+                color: var(--dark-color);
                 &:hover {
                     color: var(--shadow-color);
                 }
             }
-            padding-right: 1rem;
         }
     }
 }

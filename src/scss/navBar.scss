@@ -9,8 +9,8 @@
     z-index: 10;
     width: 6rem;
     height: 100%;
-    background: var(--dark-color);
-    color: var(--light-color);
+    background: var(--tile-color);
+    color: var(--dark-color);
     box-shadow: var(--box-shadow);
     .navLogo {
         height: 6rem;
@@ -23,13 +23,12 @@
         padding: 0;
         left: 1rem;
         top: 0;
-        color: var(--light-color);
         svg {
             height: 100%;
             width: 100%;
         }
         &:hover {
-            color: var(--tile-color);
+            color: var(--shadow-color);
         }
         .logoImg {
             width: 4rem;
@@ -56,7 +55,7 @@
                 &::after,
                 &::before,
                 div {
-                    background-color: var(--tile-color);
+                    background-color: var(--shadow-color);
                 }
             }
     }
@@ -66,9 +65,8 @@
         .navItem {
             padding: 0.5rem;
             font-size: 1rem;
-            color: var(--light-color);
             &:hover {
-                color: var(--tile-color);
+                color: var(--shadow-color);
             }
         }
     }
@@ -82,7 +80,6 @@
         a {
             display: block;
             text-decoration: none;
-            color: var(--light-color);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -90,7 +87,7 @@
             width: 3rem;
             height: 3rem;
             &:hover {
-                color: var(--tile-color);
+                color: var(--shadow-color);
             }
             .icon {
                 font-size: 2rem;

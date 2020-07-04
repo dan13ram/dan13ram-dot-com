@@ -1,0 +1,99 @@
+.artRoll {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .rollItem {
+        transition: all 0.25s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5rem;
+        width: calc(100% - 1rem);
+        .itemContainer {
+            transition: all 0.25s ease-in-out;
+            position: absolute;
+            padding-bottom: 75%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .itemContent {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            transition: all 0.25s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            // border-radius: 1rem;
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+            opacity: 0;
+            z-index: 1;
+            background: var(--tile-color-3);
+            color: var(--dark-color);
+            p {
+                &.itemDate {
+                    font-size: 0.75rem;
+                    display: none;
+                }
+                text-align: center;
+                margin: 0.5rem 0;
+                font-weight: bold;
+            }
+        }
+        transition: all 0.25s ease-in-out;
+        &:hover {
+            .itemContent {
+                opacity: 1;
+            }
+        }
+    }
+    &.full {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        .rollItem {
+            scroll-snap-align: center;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            .itemContainer,
+            .itemContainer::after,
+            .itemContainer::before {
+                height: 100vh;
+                padding: 0;
+                background-attachment: fixed;
+                background-position: top center;
+            }
+            .itemContent {
+                width: calc(100% - 2rem);
+                max-width: 60rem;
+                height: 8rem;
+                justify-content: center;
+                bottom: 0;
+                left: 50%;
+                top: auto;
+                transform: translate(-50%, -10%);
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 50rem) {
+    .artRoll {
+        grid-template-columns: 1fr;
+        &.full {
+            .rollItem .itemContent {
+                bottom: 4rem;
+            }
+        }
+    }
+}

@@ -11,6 +11,7 @@
     }
     .content {
         text-align: center;
+        width: calc(100% - 2rem);
     }
     section {
         background: var(--light-color);

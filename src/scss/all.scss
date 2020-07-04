@@ -8,19 +8,18 @@
 }
 
 :root {
-    // --dark-color: black;
-    // --light-color: white;
-    // --light-color-3: rgba(255, 255, 255, 0.3);
-    // --shadow-color: grey;
-    // --shadow-color-3: rgba(128, 128, 128, 0.3);
-    --dark-color: rgba(75, 112, 145);
-    --light-color: rgba(206, 221, 235);
-    --light-color-3: rgba(206, 221, 235, 0.3);
-    --shadow-color: rgba(107, 115, 122);
-    --shadow-color-3: rgba(107, 115, 122, 0.3);
+    --dark-color: rgba(206, 221, 235);
+    --dark-color-3: rgba(206, 221, 235, 0.3);
+    --tile-color: rgba(75, 112, 145);
+    --tile-color-3: rgba(75, 112, 145, 0.6);
+    --tile-color-8: rgba(75, 112, 145, 0.8);
+    --light-color: rgba(55, 62, 69);
+    --light-color-3: rgba(55, 62, 69, 0.3);
+    --shadow-color: rgba(150, 177, 214);
+    --shadow-color-3: rgba(150, 166, 181, 0.3);
     --background-color: var(--shadow-color);
-    --tile-color: white;
-    --box-shadow: 0.2rem 0.2rem 0.6rem var(--shadow-color);
+    --box-shadow-color: rgba(75, 112, 145, 0.3);
+    --box-shadow: 0rem 0rem 0.6rem 0.1rem var(--box-shadow-color);
 }
 
 *::-webkit-scrollbar {

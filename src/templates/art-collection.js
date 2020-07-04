@@ -4,7 +4,7 @@ import { kebabCase } from 'lodash';
 import { graphql, Link } from 'gatsby';
 import SEO from '../components/SEO';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import '../scss/post.scss';
+import '../scss/artCollection.scss';
 
 export const ArtCollectionTemplate = ({
     title,
@@ -14,7 +14,7 @@ export const ArtCollectionTemplate = ({
     helmet,
 }) => {
     return (
-        <div className="artCollection post">
+        <div className="artCollection">
             {helmet || ''}
 
             <article className="container">
@@ -25,8 +25,7 @@ export const ArtCollectionTemplate = ({
 
                 <div className="content">
                     {content && content.length ? (
-                        <div>
-                            {/* <h4>Content</h4> */}
+                        <div className="contentInner">
                             {content.map((item, index) => (
                                 <div key={index} className="contentItem">
                                     {/* <p>{item.title}</p> */}
@@ -38,10 +37,6 @@ export const ArtCollectionTemplate = ({
                                             alt: item.title,
                                         }}
                                     />
-                                    <br />
-                                    {/* <p>{item.width}</p> */}
-                                    {/* <p>{item.height}</p> */}
-                                    {/* <p>{item.size}</p> */}
                                 </div>
                             ))}
                         </div>
@@ -131,9 +126,6 @@ export const pageQuery = graphql`
                             }
                         }
                     }
-                    width
-                    height
-                    size
                 }
             }
         }

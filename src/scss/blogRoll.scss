@@ -38,16 +38,19 @@
         }
         a {
             // transform: translateY(100%);
+            align-self: flex-end;
             margin: 0;
             text-decoration: none;
             border-radius: 0.5rem;
-            color: var(--light-color);
-            background: var(--dark-color);
+            color: var(--dark-color);
+            border: 1px solid var(--dark-color-3);
             padding: 0.5rem;
             width: 100%;
             text-align: center;
             &:hover {
-                color: var(--tile-color);
+                color: var(--shadow-color);
+                border: 1px solid var(--light-color);
+                background-color: var(--light-color);
             }
             display: block;
         }
