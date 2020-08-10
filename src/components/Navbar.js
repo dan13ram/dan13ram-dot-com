@@ -48,9 +48,9 @@ const Navbar = ({ title }) => {
                 <Link className="navItem" to={`/art`}>
                     art
                 </Link>
-                <Link className="navItem" to={`/blog`}>
+                {/*<Link className="navItem" to={`/blog`}>
                     blog
-                </Link>
+                </Link>*/}
                 <Link className="navItem" to={`/about`}>
                     about
                 </Link>

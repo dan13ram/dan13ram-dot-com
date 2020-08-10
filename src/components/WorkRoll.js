@@ -41,28 +41,34 @@ class WorkRoll extends React.Component {
                                         </span>
                                     </div>
                                     <div className="workLinks">
-                                        {post.frontmatter.links.map(link => (
-                                            <div
-                                                className="linkItem"
-                                                key={link.url + `link`}
-                                            >
-                                                <a
-                                                    href={link.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
+                                        {post.frontmatter.links
+                                            .filter(
+                                                link =>
+                                                    link.label === 'code' ||
+                                                    link.label === 'live demo'
+                                            )
+                                            .map(link => (
+                                                <div
+                                                    className="linkItem"
+                                                    key={link.url + `link`}
                                                 >
-                                                    <Icon
-                                                        className="linkIcon"
-                                                        icon={getIcon(
-                                                            link.icon
-                                                        )}
-                                                    />
-                                                    <span className="linkText">
-                                                        {link.label}
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        ))}
+                                                    <a
+                                                        href={link.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        <Icon
+                                                            className="linkIcon"
+                                                            icon={getIcon(
+                                                                link.icon
+                                                            )}
+                                                        />
+                                                        <span className="linkText">
+                                                            {link.label}
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            ))}
                                     </div>
                                 </div>
                                 <div className="workContent">
