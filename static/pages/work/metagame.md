@@ -2,7 +2,7 @@
 templateKey: work-project
 title: MyMeta Profiles
 date: 2021-02-05T00:18:20.000Z
-description: Decentralized profiles for players in MetaGame
+description: Decentralized profiles for the MetaGame
 featuredItem: true
 featuredImage: /img/work/metagame.png
 points:
