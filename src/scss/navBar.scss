@@ -1,3 +1,5 @@
+@import './logos.scss';
+
 .navBar {
     position: fixed;
     top: 0;
@@ -10,8 +12,8 @@
     width: 6rem;
     height: 100%;
     background: var(--tile-color);
-    color: var(--dark-color);
-    box-shadow: var(--box-shadow);
+    color: var(--light-color);
+    // box-shadow: var(--box-shadow);
     .navLogo {
         height: 6rem;
         width: 6rem;
@@ -43,7 +45,7 @@
         &::after,
         &::before,
         div {
-            background-color: var(--light-color);
+            background-color: var(--dark-color);
             border-radius: 2px;
             content: '';
             display: block;
@@ -86,16 +88,41 @@
             cursor: pointer;
             width: 3rem;
             height: 3rem;
-            &:hover {
-                color: var(--shadow-color);
-            }
             .icon {
+                transition: 0.25s;
                 font-size: 2rem;
+                &.instagram {
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: $instagram-mono;
+                    background-size: cover;
+                }
+                &.metagame {
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: $metagame-mono;
+                    background-size: cover;
+                }
+            }
+            &:hover {
+                transition: 0.25s;
+                color: var(--shadow-color);
+                .twitter {
+                    color: #00aced;
+                }
+                .github {
+                    color: black;
+                }
+                .metagame {
+                    background-image: $metagame;
+                }
+                .instagram {
+                    background-image: $instagram;
+                }
             }
         }
     }
 }
-
 
 @media (max-width: 40rem) {
     .navBar {
@@ -195,7 +222,7 @@
                     display: flex;
                     height: 4rem;
                     &:hover {
-                        background: var(--light-color);
+                        background: var(--dark-color);
                     }
                     &:not(:first-child) {
                         border-style: solid none none none;
@@ -311,7 +338,7 @@
                     display: flex;
                     height: 4rem;
                     &:hover {
-                        background: var(--light-color);
+                        background: var(--dark-color);
                     }
                 }
             }

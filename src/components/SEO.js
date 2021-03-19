@@ -16,7 +16,18 @@ const SEO = ({ description, lang, meta, title, titleTemplate }) => {
             }}
             title={title}
             titleTemplate={titleTemplate || `%s | ${siteMetadata.title}`}
-            link={[{ rel: 'icon', type: 'image/svg+xml', href: logo }]}
+            link={[
+                { rel: 'icon', type: 'image/svg+xml', href: logo },
+                {
+                    rel: 'preconnect',
+                    href: 'https://fonts.gstatic.com',
+                },
+                {
+                    href:
+                        'https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap',
+                    rel: 'stylesheet',
+                },
+            ]}
             meta={[
                 {
                     name: `description`,

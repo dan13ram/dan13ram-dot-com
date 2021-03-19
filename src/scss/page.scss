@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: calc(100% - 1rem);
+    width: calc(100% - 2rem);
     max-width: 60rem;
-    margin: 0.5rem;
+    margin: 1rem;
     section {
         display: flex;
         flex-direction: column;
@@ -25,5 +25,11 @@
         border-style: none none solid none;
         border-width: 1px;
         border-color: var(--shadow-color-3);
+    }
+}
+
+@media (min-width: 100rem) {
+    .page {
+        max-width: 80rem;
     }
 }

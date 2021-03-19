@@ -12,7 +12,7 @@
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background: var(--light-color);
+    background: var(--dark-color);
     .main {
         position: relative;
         padding-left: 6rem;
@@ -38,7 +38,7 @@
             width: calc(100% - 2rem);
             margin-left: 1rem;
             margin-right: 1rem;
-            color: var(--dark-color);
+            color: var(--light-color);
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -48,7 +48,7 @@
                 padding-bottom: 1rem;
                 font-size: 1rem;
                 text-decoration: none;
-                color: var(--dark-color);
+                color: var(--light-color);
                 &:hover {
                     color: var(--shadow-color);
                 }
@@ -57,7 +57,7 @@
                 padding: 0.5rem;
                 font-size: 1rem;
                 text-decoration: none;
-                color: var(--dark-color);
+                color: var(--light-color);
                 &:hover {
                     color: var(--shadow-color);
                 }

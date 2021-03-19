@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash';
 import { graphql, Link } from 'gatsby';
 import SEO from '../components/SEO';
 import '../scss/post.scss';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export const WorkProjectTemplate = ({
     title,
@@ -61,6 +62,14 @@ export const WorkProjectTemplate = ({
                         </div>
                     ) : null}
 
+                    <div>
+                        <PreviewCompatibleImage
+                            imageInfo={{
+                                image: featuredImage,
+                            }}
+                        />
+                    </div>
+
                     {tools && tools.length ? (
                         <div>
                             <h4>Tools Used</h4>
@@ -71,6 +80,7 @@ export const WorkProjectTemplate = ({
                             </ul>
                         </div>
                     ) : null}
+
                 </section>
             </article>
             <footer>
@@ -106,7 +116,15 @@ WorkProjectTemplate.propTypes = {
 const WorkProject = ({ data }) => {
     const {
         markdownRemark: {
-            frontmatter: { title, description, tags, tools, links, points, featuredImage },
+            frontmatter: {
+                title,
+                description,
+                tags,
+                tools,
+                links,
+                points,
+                featuredImage,
+            },
         },
     } = data;
     return (
@@ -154,7 +172,7 @@ export const pageQuery = graphql`
                 tools
                 featuredImage {
                     childImageSharp {
-                        fluid(maxWidth: 500, quality: 100) {
+                        fluid(maxWidth: 2000, quality: 100) {
                             ...GatsbyImageSharpFluid
                         }
                     }

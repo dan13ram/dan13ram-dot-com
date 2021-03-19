@@ -20,6 +20,7 @@ const useSiteMetadata = () => {
                             youtube
                             vimeo
                             github
+                            metagame
                         }
                     }
                 }

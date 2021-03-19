@@ -1,28 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { applyTheme } from '../utils/Theme';
 import useSiteMetadata from '../utils/SiteMetadata';
 import Logo from './Logo';
 
 import { Icon } from '@iconify/react';
-import instagramOutlined from '@iconify/icons-ant-design/instagram-outlined';
 import twitterOutlined from '@iconify/icons-ant-design/twitter-outlined';
-import linkedinOutlined from '@iconify/icons-ant-design/linkedin-outlined';
 import githubOutlined from '@iconify/icons-ant-design/github-outlined';
 import '../scss/navBar.scss';
-/* eslint-disable */
 
 const Navbar = ({ title }) => {
-    const { author, social } = useSiteMetadata();
+    const { social } = useSiteMetadata();
     const [open, toggleOpen] = useState(false);
-    const [currentTheme, setTheme] = React.useState('light');
-    const [theme, toggleTheme] = React.useState(false);
-    const changeTheme = () => {
-        toggleTheme(theme => !theme);
-        const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-        setTheme(nextTheme);
-        applyTheme(nextTheme);
-    };
 
     return (
         <nav className={open ? 'navBar open' : 'navBar'}>
@@ -55,44 +43,44 @@ const Navbar = ({ title }) => {
                     about
                 </Link>
             </div>
-            <div className="switchContainer">
-                <label className="switch">
-                    <input
-                        type="checkbox"
-                        defaultChecked={theme}
-                        onChange={changeTheme}
-                    />
-                    <span className="slider round"></span>
-                </label>
-            </div>
+            {/* <div className="switchContainer"> */}
+            {/*     <label className="switch"> */}
+            {/*         <input */}
+            {/*             type="checkbox" */}
+            {/*             defaultChecked={theme} */}
+            {/*             onChange={changeTheme} */}
+            {/*         /> */}
+            {/*         <span className="slider round"></span> */}
+            {/*     </label> */}
+            {/* </div> */}
             <div className="social">
+                <a
+                    href={`https://my.metagame.wtf/player/${social.metagame}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span className="icon metagame"></span>
+                </a>
                 <a
                     href={`https://github.com/${social.github}`}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Icon className="icon" icon={githubOutlined} />
+                    <Icon className="icon github" icon={githubOutlined} />
                 </a>
                 <a
                     href={`https://instagram.com/${social.instagram}`}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Icon className="icon" icon={instagramOutlined} />
+                    <span className="icon instagram"></span>
                 </a>
                 <a
                     href={`https://twitter.com/${social.twitter}`}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Icon className="icon" icon={twitterOutlined} />
-                </a>
-                <a
-                    href={`https://linkedin.com/in/${social.linkedIn}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Icon className="icon" icon={linkedinOutlined} />
+                    <Icon className="icon twitter" icon={twitterOutlined} />
                 </a>
             </div>
             <div

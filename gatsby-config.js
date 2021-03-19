@@ -14,6 +14,7 @@ module.exports = {
             youtube: `dan13ram`,
             vimeo: `dan13ram`,
             github: `dan13ram`,
+            metagame: `dan13ram`,
         },
     },
     plugins: [
@@ -78,6 +79,14 @@ module.exports = {
                 component: require.resolve(`./src/components/Layout`),
             },
         },
+        {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+                rule: {
+                    include: /src\/assets\/.*\.svg/,
+                },
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
@@ -94,7 +103,7 @@ module.exports = {
                 start_url: `/`,
                 background_color: `#ffffff`,
                 theme_color: `#ffffff`,
-                icon: `static/img/logo.svg`
+                icon: `static/img/logo.svg`,
             },
         },
         {

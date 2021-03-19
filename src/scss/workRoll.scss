@@ -17,10 +17,11 @@
             grid-row: 2 / span 2;
             grid-column: 2;
         }
-        padding: 1rem 0.5rem;
-        color: var(--dark-color);
+        padding: 1.5rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--light-color);
         background: var(--tile-color);
-        box-shadow: var(--box-shadow);
+        // box-shadow: var(--box-shadow);
         display: grid;
         width: calc(100% - 1rem);
         margin: 0.5rem 0;
@@ -38,6 +39,12 @@
                 flex-direction: column;
                 justify-content: space-between;
                 margin-left: 0.6rem;
+                font-family: var(--font-title);
+                font-weight: 500;
+                .workTitle {
+                    font-size: 2rem;
+                    margin-bottom: 0.5rem;
+                }
             }
         }
         .workContent {
@@ -56,8 +63,8 @@
         }
         .viewLink {
             border-radius: 0.5rem;
-            color: var(--dark-color);
-            border: 1px solid var(--dark-color-3);
+            color: var(--light-color);
+            border: 1px solid var(--light-color-3);
             padding: 0.5rem;
             width: 100%;
             display: flex;
@@ -66,8 +73,8 @@
             cursor: pointer;
             &:hover {
                 color: var(--shadow-color);
-                border: 1px solid var(--light-color);
-                background-color: var(--light-color);
+                border: 1px solid var(--dark-color);
+                background-color: var(--dark-color);
             }
         }
         .workTitle {
@@ -98,7 +105,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: var(--dark-color);
+                    color: var(--light-color);
                     &:hover {
                         color: var(--shadow-color);
                     }
@@ -120,7 +127,10 @@
     }
 }
 
-@media (min-width: 40rem) and (min-height: 30rem) {
+@media (min-width: 100rem) {
+    .workRoll {
+        max-width: 75rem;
+    }
 }
 
 @media (max-width: 50rem) {
@@ -135,9 +145,9 @@
                 }
                 .linkItem {
                     padding: 0;
-                .linkIcon {
-                    margin: 0;
-                }
+                    .linkIcon {
+                        margin: 0;
+                    }
                 }
                 .linkText {
                     display: none;
@@ -148,7 +158,4 @@
             }
         }
     }
-}
-
-@media (max-width: 40rem), (max-height: 30rem) {
 }
