@@ -90,12 +90,6 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: process.env.GA_PROPERTY_ID,
-            },
-        },
-        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `dan13ram`,

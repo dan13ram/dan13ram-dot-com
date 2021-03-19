@@ -2,10 +2,10 @@ import CMS from 'netlify-cms-app';
 // import uploadcare from 'netlify-cms-media-library-uploadcare';
 // import cloudinary from 'netlify-cms-media-library-cloudinary';
 
-import BlogPostPreview from './preview-templates/BlogPostPreview';
-import ArtCollectionPreview from './preview-templates/ArtCollectionPreview';
-import WorkProjectPreview from "./preview-templates/WorkProjectPreview";
-import AboutPagePreview from './preview-templates/AboutPagePreview';
+import { BlogPostPreview } from './templates/BlogPostTemplate';
+import { ArtCollectionPreview } from './templates/ArtCollectionTemplate';
+import { WorkProjectPreview } from "./templates/WorkProjectTemplate";
+import { AboutPagePreview } from './templates/AboutPageTemplate';
 
 // CMS.registerMediaLibrary(uploadcare);
 // CMS.registerMediaLibrary(cloudinary);

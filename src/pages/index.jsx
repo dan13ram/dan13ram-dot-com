@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { navigate } from 'gatsby';
 
-export default () => {
+const IndexPage = () => {
     useEffect(() => {
         navigate('/work');
     }, []);
     return null;
 };
+
+export default IndexPage;

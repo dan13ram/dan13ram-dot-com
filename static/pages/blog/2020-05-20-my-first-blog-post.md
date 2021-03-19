@@ -6,7 +6,7 @@ description: The first blog post must contain some data but mainly an
     introduction to myself and a little about what the readers can expect in my
     future posts.
 featuredPost: true
-featuredImage: /img/charcoal-portraits/bob-dylan-smoking.jpeg
+featuredImage: /img/charcoal/bob-dylan-smoking.jpeg
 tags:
     - first
     - testing
@@ -25,12 +25,12 @@ I'm writing my first blog post right now. I never thought that I would be using 
 I can add images like this
 
 ```
-![Bob Dylan Smoking](/img/charcoal-portraits/bob-dylan-smoking.jpeg)
+![Bob Dylan Smoking](/img/charcoal/bob-dylan-smoking.jpeg)
 ```
 
 and that results in the following:
 
-![Bob Dylan Smoking](/img/charcoal-portraits/bob-dylan-smoking.jpeg)
+![Bob Dylan Smoking](/img/charcoal/bob-dylan-smoking.jpeg)
 
 I can add todo notes like so
 

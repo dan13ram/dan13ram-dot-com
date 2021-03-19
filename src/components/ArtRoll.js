@@ -55,7 +55,7 @@ ArtRoll.propTypes = {
     }),
 };
 
-export default () => (
+const staticQuery = () => (
     <StaticQuery
         query={graphql`
             query ArtRollQuery {
@@ -94,3 +94,5 @@ export default () => (
         render={(data, count) => <ArtRoll data={data} count={count} />}
     />
 );
+
+export default staticQuery;

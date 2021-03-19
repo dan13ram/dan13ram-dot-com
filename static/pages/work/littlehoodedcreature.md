@@ -1,8 +1,8 @@
 ---
 templateKey: work-project
-title: littlehoodedcreature
+title: LHC Portfolio
 date: 2020-03-20T00:18:20.000Z
-description: Artist portfolio and blog
+description: Artist portfolio and blog for littlehoodedcreature
 featuredItem: true
 featuredImage: /img/work/littlehoodedcreature.png
 points:
