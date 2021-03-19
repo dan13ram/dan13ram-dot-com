@@ -45,7 +45,7 @@
         &::after,
         &::before,
         div {
-            background-color: var(--dark-color);
+            background-color: var(--light-color);
             border-radius: 2px;
             content: '';
             display: block;
@@ -90,7 +90,7 @@
             height: 3rem;
             .icon {
                 transition: 0.25s;
-                font-size: 2rem;
+                font-size: 2.125rem;
                 &.instagram {
                     width: 2rem;
                     height: 2rem;
