@@ -14,6 +14,7 @@ const WorkProject = ({ data }) => {
                 links,
                 points,
                 featuredImage,
+                innerImage,
             },
         },
     } = data;
@@ -22,6 +23,7 @@ const WorkProject = ({ data }) => {
             title={title}
             description={description}
             featuredImage={featuredImage}
+            innerImage={innerImage}
             helmet={
                 <SEO
                     titleTemplate="%s | Work"
@@ -55,6 +57,13 @@ export const pageQuery = graphql`
                 tags
                 tools
                 featuredImage {
+                    childImageSharp {
+                        fluid(maxWidth: 2000, quality: 100) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                innerImage {
                     childImageSharp {
                         fluid(maxWidth: 2000, quality: 100) {
                             ...GatsbyImageSharpFluid

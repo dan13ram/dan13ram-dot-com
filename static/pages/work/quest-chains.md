@@ -1,24 +1,26 @@
 ---
 templateKey: work-project
-title: Smart Invoice
-date: 2021-03-05T00:18:20.000Z
-description: A new way to get paid for services
+title: Quest Chains
+date: 2022-03-05T00:18:20.000Z
+description: Learn by going on quests
 featuredItem: true
-featuredImage: /img/work/smartinvoice-bg.png
-innerImage: /img/work/smartinvoice.png
+featuredImage: /img/work/questchains-bg.png
+innerImage: /img/work/questchains.png
 points:
-    - Decentralized invoicing tool that facilitates payments between organizations or Clients, and freelancers or Providers
+    - Gamified learning / web3 onboarding platform which rewards users through questing.
     - Developed the frontend react dapp, the subgraph to index the smart-contracts, as well as the smart contracts with 100% unit test coverage.
+    - Finalists in HackFS EthGlobal Hackathon.
     - Ongoing open-source project
 links:
     - label: live demo
       icon: view
-      url: https://smartinvoice.xyz
+      url: https://questchains.xyz
     - label: code
       icon: github
-      url: https://github.com/raid-guild/smart-invoice
+      url: https://github.com/quest-chains
 tools:
-    - reactjs
+    - typescript
+    - nextjs
     - solidity
     - ethersjs
     - graphprotocol
@@ -27,5 +29,4 @@ tags:
     - frontend
     - backend
     - fullstack
-    - xdai
 ---

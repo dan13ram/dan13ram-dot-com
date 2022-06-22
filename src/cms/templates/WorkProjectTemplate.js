@@ -8,7 +8,8 @@ import PreviewCompatibleImage from '../../components/PreviewCompatibleImage';
 export const WorkProjectTemplate = ({
     title,
     description,
-    featuredImage,
+    // featuredImage,
+    innerImage,
     helmet,
     points,
     tags,
@@ -64,7 +65,7 @@ export const WorkProjectTemplate = ({
                     <div>
                         <PreviewCompatibleImage
                             imageInfo={{
-                                image: featuredImage,
+                                image: innerImage,
                             }}
                         />
                     </div>
@@ -79,7 +80,6 @@ export const WorkProjectTemplate = ({
                             </ul>
                         </div>
                     ) : null}
-
                 </section>
             </article>
             <footer>
@@ -87,7 +87,7 @@ export const WorkProjectTemplate = ({
                     <div>
                         <h4>Tags</h4>
                         <ul className="taglist">
-                            {tags.map(tag => (
+                            {tags.map((tag) => (
                                 <li key={tag + `tag`}>
                                     <Link to={`/tags/${kebabCase(tag)}/`}>
                                         {tag}
@@ -127,4 +127,3 @@ export const WorkProjectPreview = ({ entry, widgetFor }) => {
         />
     );
 };
-

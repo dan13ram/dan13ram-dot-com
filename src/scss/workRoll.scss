@@ -5,33 +5,52 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
     .workItem {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        .workImage {
+            border-radius: 0.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            img {
+                position: absolute;
+                top: 50%;
+                border-radius: 0.5rem;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
     .workItemInner {
-        .workImage {
-            grid-row: 2 / span 2;
-            grid-column: 2;
-        }
-        padding: 1.5rem 1rem;
+        z-index: 0;
+
         border-radius: 0.5rem;
         color: var(--light-color);
-        background: var(--tile-color);
-        // box-shadow: var(--box-shadow);
-        display: grid;
-        width: calc(100% - 1rem);
-        margin: 0.5rem 0;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr auto;
-        column-gap: 0.5rem;
-        row-gap: 1rem;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        min-height: 27rem;
 
         .workHeaderContainer {
-            grid-column: 1 / span 2;
             display: flex;
             justify-content: space-between;
             .workHeader {
@@ -52,9 +71,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            ul {
-                margin: 0;
-            }
+            flex: 1;
+            padding-bottom: 1.5rem;
+            padding-top: 1rem;
         }
         .viewMore {
             display: flex;
@@ -118,9 +137,9 @@
             justify-content: flex-start;
             align-items: center;
             .toolItem {
-                padding: 0 0.5rem;
+                padding: 0.5rem;
                 margin: 0.5rem 0.5rem 0 0;
-                border-radius: 0.5rem;
+                border-radius: 9999px;
                 background: var(--shadow-color-3);
             }
         }
@@ -135,9 +154,14 @@
 
 @media (max-width: 50rem) {
     .workRoll {
+        padding: 0rem;
+        .workItem {
+            margin-bottom: 1rem;
+        }
         .workItemInner {
             display: flex;
             flex-direction: column;
+            min-height: 20rem;
             .workHeaderContainer {
                 // flex-direction: column;
                 // margin-bottom: 0.5rem;

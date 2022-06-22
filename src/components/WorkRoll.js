@@ -11,8 +11,9 @@ import eyeIcon from '@iconify/icons-ant-design/eye-outlined';
 class WorkRoll extends React.Component {
     render() {
         const { data } = this.props;
+        console.log(data);
         const { edges: posts } = data.allMarkdownRemark;
-        const getIcon = icon => {
+        const getIcon = (icon) => {
             switch (icon) {
                 case 'view':
                     return eyeIcon;
@@ -30,6 +31,15 @@ class WorkRoll extends React.Component {
                 {posts &&
                     posts.map(({ node: post }) => (
                         <article key={post.id} className="workItem">
+                            <div className="workImage">
+                                <img
+                                    src={
+                                        post.frontmatter.featuredImage
+                                            .childImageSharp.fluid.src
+                                    }
+                                    alt={post.frontmatter.title + ' image'}
+                                />
+                            </div>
                             <div className="workItemInner">
                                 <div className="workHeaderContainer">
                                     <div className="workHeader">
@@ -43,11 +53,11 @@ class WorkRoll extends React.Component {
                                     <div className="workLinks">
                                         {post.frontmatter.links
                                             .filter(
-                                                link =>
+                                                (link) =>
                                                     link.label === 'code' ||
                                                     link.label === 'live demo'
                                             )
-                                            .map(link => (
+                                            .map((link) => (
                                                 <div
                                                     className="linkItem"
                                                     key={link.url + `link`}
@@ -85,7 +95,7 @@ class WorkRoll extends React.Component {
                                         )}
                                     </ul>
                                     <div className="workTools">
-                                        {post.frontmatter.tools.map(tool => (
+                                        {post.frontmatter.tools.map((tool) => (
                                             <div
                                                 className="toolItem"
                                                 key={tool + `tool`}
@@ -94,14 +104,6 @@ class WorkRoll extends React.Component {
                                             </div>
                                         ))}
                                     </div>
-                                </div>
-                                <div className="workImage">
-                                    <PreviewCompatibleImage
-                                        imageInfo={{
-                                            image:
-                                                post.frontmatter.featuredImage,
-                                        }}
-                                    />
                                 </div>
                                 <div className="viewMore">
                                     <Link

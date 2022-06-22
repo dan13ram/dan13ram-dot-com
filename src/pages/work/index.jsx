@@ -1,10 +1,9 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import WorkRoll from '../../components/WorkRoll';
 import SEO from '../../components/SEO';
 import '../../scss/page.scss';
 
-const WorkPage = ({ data }) => (
+const WorkPage = () => (
     <div className="workPage page">
         <SEO title={`Work`} />
         <section className="content">
@@ -12,14 +11,5 @@ const WorkPage = ({ data }) => (
         </section>
     </div>
 );
-export default WorkPage;
 
-export const workPageQuery = graphql`
-    query WorkQuery {
-        site {
-            siteMetadata {
-                title
-            }
-        }
-    }
-`;
+export default WorkPage;

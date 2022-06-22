@@ -4,11 +4,11 @@ title: Open Grants
 date: 2020-11-05T00:18:20.000Z
 description: Empower the next gen of ETH devs
 featuredItem: true
-featuredImage: /img/work/open-grants.png
+featuredImage: /img/work/open-grants-bg.png
+innerImage: /img/work/open-grants.png
 points:
-    - Developed the frontend react dapp.
-    - Developed the subgraph to index the smart-contracts.
-    - Updated the smart contracts.
+    - Fund public goods with your ETH. Stream and split ETH payments directly to the project team.
+    - Developed the frontend react dapp and the subgraph to index the smart-contracts, also updating the smart contracts as needed.
 links:
     - label: live demo
       icon: view
@@ -20,7 +20,7 @@ tools:
     - reactjs
     - solidity
     - ethersjs
-    - thegraph
+    - graphprotocol
 tags:
     - ethereum
     - frontend

@@ -4,7 +4,8 @@ title: Vahanam
 date: 2020-04-20T00:18:20.000Z
 description: A Decentralized Supply Chain Platform
 featuredItem: true
-featuredImage: /img/work/vahanam.png
+featuredImage: /img/work/vahanam-bg.png
+innerImage: /img/work/vahanam.png
 points:
     - Won the second prize in the Stop Covid-19 virtual global hackathon conducted by Gitcoin and Consensys Health.
     - Developed the frontend dapp which interacts with the smart-contracts using web3JS.

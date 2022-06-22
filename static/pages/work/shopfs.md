@@ -4,11 +4,13 @@ title: ShopFS
 date: 2020-08-05T00:18:20.000Z
 description: A Decentralized Data Marketplace
 featuredItem: true
-featuredImage: /img/work/shopfs.png
+featuredImage: /img/work/shopfs-bg.png
+innerImage: /img/work/shopfs.png
 points:
+    - Buy and Sell files on the decentralized market for all your data needs.
     - Developed the frontend dapp which interacts with the smart-contracts using web3JS.
     - Developed the KMS to securely share private keys to buyers after sale is done.
-    - Ongoing open-source project.
+    - Finalists in HackFS EthGlobal Hackathon.
 links:
     - label: live demo
       icon: view

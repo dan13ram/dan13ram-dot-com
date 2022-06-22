@@ -1,25 +1,26 @@
 ---
 templateKey: work-project
-title: xDAI Omnibridge
+title: Gnosis Omnibridge
 date: 2020-12-05T00:18:20.000Z
-description: Bridge tokens between ETH Mainnet and xDai chain
+description: Bridge tokens between ETH Mainnet and Gnosis chain
 featuredItem: true
 featuredImage: /img/work/omnibridge.png
+innerImage: /img/work/omnibridge.png
 points:
-    - Developed the frontend react dapp.
-    - Developed the subgraph to index the smart-contracts.
+    - Simplest way to transfer any ERC20/ERC677/ERC827 between two EVM compatible blockchains.
+    - Developed the frontend react dapp and the subgraph to index the smart-contracts.
     - Ongoing open-source project
 links:
     - label: live demo
       icon: view
-      url: https://omni.xdaichain.com
+      url: https://omni.gnosischain.com
     - label: code
       icon: github
       url: https://github.com/xdaichain/omnibridge
 tools:
     - reactjs
     - ethersjs
-    - thegraph
+    - graphprotocol
 tags:
     - ethereum
     - frontend

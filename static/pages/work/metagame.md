@@ -1,13 +1,14 @@
 ---
 templateKey: work-project
-title: MyMeta Profiles
+title: MetaGame - MyMeta Profiles
 date: 2021-02-05T00:18:20.000Z
 description: Decentralized profiles for the MetaGame
 featuredItem: true
-featuredImage: /img/work/metagame.png
+featuredImage: /img/work/metagame-bg.png
+innerImage: /img/work/metagame.png
 points:
+    - Decentralized user profiles with customizable layout, embedded links, nft gallery, etc.
     - Co-developed the frontend nextJs dapp.
-    - Co-developed the subgraph to index the smart-contracts.
     - Ongoing open-source project
 links:
     - label: live demo
@@ -17,10 +18,11 @@ links:
       icon: github
       url: https://github.com/MetaFam/TheGame
 tools:
-    - reactjs
     - nextjs
     - ethersjs
-    - thegraph
+    - typescript
+    - ceramic
+    - hasura
 tags:
     - ethereum
     - frontend
