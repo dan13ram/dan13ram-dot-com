@@ -9,7 +9,7 @@ innerImage: /img/work/questchains.png
 points:
     - Gamified learning / web3 onboarding platform which rewards users through questing.
     - Developed the frontend react dapp, the subgraph to index the smart-contracts, as well as the smart contracts with 100% unit test coverage.
-    - Finalists in HackFS EthGlobal Hackathon.
+    - Finalists in DAOHacks EthGlobal Hackathon 2022.
     - Ongoing open-source project
 links:
     - label: live demo
