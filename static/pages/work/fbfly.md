@@ -8,7 +8,7 @@ featuredImage: /img/work/fbfly-bg.png
 innerImage: /img/work/fbfly.png
 points:
     - Collect and manage funds for your facebook group with the power of DAOs.
-    - Won the Almighty Quetzalcoatl Prize and the second price for Best UX in DAO Global Hackathon http://hackforfreedom.org/.
+    - Won the Almighty Quetzalcoatl Prize and the second prize for Best UX in DAO Global Hackathon http://hackforfreedom.org/.
 links:
     - label: live demo
       icon: view
